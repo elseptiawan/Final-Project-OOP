@@ -9,8 +9,8 @@ public class Sudoku {
             { 1, 6, 8, 3, 9, 2, 5, 7, 4 } };
 
     public static final int GRID_9X9 = 9;
-    public static final int GAME_MODE_EASY = 50;
-    public static final int DEFAULT_TOLERANCE = 4;
+    public static final int GAME_MODE_EASY = 45;
+    public static final int DEFAULT_TOLERANCE = 5;
     public static final String SET_VALUE_9X9 = "123456789";
 
     private int[][] puzzle;
@@ -203,13 +203,13 @@ public class Sudoku {
         return puzzle;
     }
 
-    private void printArray(int[][] a) {
-        for (int i = 0; i < a.length; i++) {
-            for (int j = 0; j < a[i].length; j++) {
-                System.out.print(a[i][j] + "\t");
-            }
-            System.out.println();
-        }
-        System.out.println();
-    }
+    // private void printArray(int[][] a) {
+    // for (int i = 0; i < a.length; i++) {
+    // for (int j = 0; j < a[i].length; j++) {
+    // System.out.print(a[i][j] + "\t");
+    // }
+    // System.out.println();
+    // }
+    // System.out.println();
+    // }
 }

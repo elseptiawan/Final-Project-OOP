@@ -7,11 +7,6 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-/*
- * UI.java
- *
- * Created on Mar 17, 2013, 1:39:49 AM
- */
 public class SudokuUI extends javax.swing.JFrame {
 
     private JButton[][] buttons;
@@ -35,26 +30,11 @@ public class SudokuUI extends javax.swing.JFrame {
         base = new javax.swing.JPanel();
         options = new javax.swing.JPanel();
         newGameBut = new javax.swing.JButton();
-        resetGameBut = new javax.swing.JButton();
-        pause = new javax.swing.JButton();
-        timeLabel = new javax.swing.JLabel();
-        resume = new javax.swing.JButton();
-        submit = new javax.swing.JButton();
         holder = new javax.swing.JPanel();
         board = new javax.swing.JPanel();
         menue = new javax.swing.JMenuBar();
         game = new javax.swing.JMenu();
         newGame = new javax.swing.JMenuItem();
-        newGame6X6 = new javax.swing.JMenuItem();
-        resetGame = new javax.swing.JMenuItem();
-        jSeparator1 = new javax.swing.JPopupMenu.Separator();
-        exit = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        beginner = new javax.swing.JRadioButtonMenuItem();
-        intermediator = new javax.swing.JRadioButtonMenuItem();
-        expart = new javax.swing.JRadioButtonMenuItem();
-        help = new javax.swing.JMenu();
-        about = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sudoku");
@@ -81,40 +61,27 @@ public class SudokuUI extends javax.swing.JFrame {
             }
         });
 
-        submit.setBackground(new java.awt.Color(255, 255, 255));
-        submit.setFont(new java.awt.Font("Tahoma", 0, 12));
-        submit.setText("Submit");
-        submit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout optionsLayout = new javax.swing.GroupLayout(options);
         options.setLayout(optionsLayout);
         optionsLayout.setHorizontalGroup(optionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(optionsLayout.createSequentialGroup()
-                        .addComponent(newGameBut, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED).addComponent(submit,
-                                javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)));
+                .addGroup(optionsLayout.createSequentialGroup().addComponent(newGameBut,
+                        javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)));
         optionsLayout.setVerticalGroup(optionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(optionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(newGameBut, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
-                        .addComponent(submit, javax.swing.GroupLayout.PREFERRED_SIZE, 25,
-                                javax.swing.GroupLayout.PREFERRED_SIZE)));
+                        .addComponent(newGameBut, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)));
 
         holder.setBackground(new java.awt.Color(255, 255, 255));
         holder.setAlignmentX(0.0F);
         holder.setAlignmentY(0.0F);
         holder.setLayout(new java.awt.GridLayout(1, 1));
 
-        board.setBackground(new java.awt.Color(255, 255, 255));
-        board.setAlignmentX(0.0F);
-        board.setAlignmentY(0.0F);
-        board.setMinimumSize(new java.awt.Dimension(100, 100));
-        board.setPreferredSize(new java.awt.Dimension(100, 100));
-        board.setLayout(new java.awt.GridLayout(9, 9));
-        holder.add(board);
+        // board.setBackground(new java.awt.Color(255, 255, 255));
+        // board.setAlignmentX(0.0F);
+        // board.setAlignmentY(0.0F);
+        // board.setMinimumSize(new java.awt.Dimension(100, 100));
+        // board.setPreferredSize(new java.awt.Dimension(100, 100));
+        // board.setLayout(new java.awt.GridLayout(9, 9));
+        // holder.add(board);
 
         javax.swing.GroupLayout baseLayout = new javax.swing.GroupLayout(base);
         base.setLayout(baseLayout);
@@ -126,15 +93,15 @@ public class SudokuUI extends javax.swing.JFrame {
                                                 javax.swing.GroupLayout.DEFAULT_SIZE, 572, Short.MAX_VALUE)
                                         .addComponent(options, javax.swing.GroupLayout.Alignment.LEADING,
                                                 javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addContainerGap()));
+                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))));
+        // .addContainerGap()));
         baseLayout.setVerticalGroup(baseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(baseLayout.createSequentialGroup().addContainerGap()
                         .addComponent(options, javax.swing.GroupLayout.PREFERRED_SIZE,
                                 javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(holder, javax.swing.GroupLayout.DEFAULT_SIZE, 534, Short.MAX_VALUE)
-                        .addContainerGap()));
+                        .addComponent(holder, javax.swing.GroupLayout.DEFAULT_SIZE, 534, Short.MAX_VALUE)));
+        // .addContainerGap()));
 
         game.setText("Game");
 
@@ -172,7 +139,7 @@ public class SudokuUI extends javax.swing.JFrame {
         actionListener = new ActionListener[grid][grid];
         board.setLayout(new GridLayout(grid, grid, 3, 3));
 
-        int rowsInGrid = grid == 9 ? 3 : 2;
+        int rowsInGrid = 3;
 
         for (int i = 0; i < grid; i++) {
             for (int j = 0; j < grid; j++) {
@@ -184,12 +151,12 @@ public class SudokuUI extends javax.swing.JFrame {
                 } else {
                     final JButton tempbutton = buttons[i][j];
                     final JPanel tempBlock = blocks[i][j];
-                    actionListener[i][j] = new ActionListener() {
+                    // actionListener[i][j] = new ActionListener() {
 
-                        public void actionPerformed(ActionEvent e) {
-                            viewInputs(tempBlock, tempbutton, grid);
-                        }
-                    };
+                    // public void actionPerformed(ActionEvent e) {
+                    // // viewInputs(tempBlock, tempbutton, grid);
+                    // }
+                    // };
                     buttons[i][j].addActionListener(actionListener[i][j]);
                 }
                 buttons[i][j].setText(text);
@@ -215,24 +182,9 @@ public class SudokuUI extends javax.swing.JFrame {
         this.setVisible(true);
     }
 
-    private void newGameButActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_newGameButActionPerformed
+    private void newGameButActionPerformed(java.awt.event.ActionEvent evt) {
         int[][] puzzle = sudoku.getNewPuzzle(grid, gameMode);
         createBoard(puzzle);
-    }
-
-    private void submitActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_submitActionPerformed
-        if (!isAnsComplete()) {
-            JOptionPane.showMessageDialog(this, "Please complete your answer.");
-        } else {
-            boolean isAnsCorrect = sudoku.check(getAns());
-            String messageStr = "";
-            if (isAnsCorrect) {
-                messageStr = "Congratulation You have won the Game in " + timeLabel.getText();
-            } else {
-                messageStr = "Sorry You have failed. ";
-            }
-            showMessage(messageStr);
-        }
     }
 
     private void initialize() {
@@ -240,85 +192,13 @@ public class SudokuUI extends javax.swing.JFrame {
         createBoard(puzzle);
     }
 
-    private void viewInputs(JPanel block, JButton inputButtton, int numOfInput) {
-        JPanel inputs = new Inputs(this, block, inputButtton, numOfInput);
-        block.remove(inputButtton);
-        block.add(inputs);
-        this.setVisible(true);
-    }
-
-    public void setInput(String ans, JPanel block, JButton inputButtton) {
-        block.removeAll();
-        inputButtton.setText(ans);
-        inputButtton.setFont(new java.awt.Font("Tahoma", 1, 24));
-        block.add(inputButtton);
-        this.repaint();
-    }
-
-    private int[][] getAns() {
-        int ans[][] = new int[grid][grid];
-
-        for (int i = 0; i < grid; i++) {
-            for (int j = 0; j < grid; j++) {
-                try {
-                    ans[i][j] = Integer.parseInt(buttons[i][j].getText());
-                } catch (NumberFormatException e) {
-                    ans[i][j] = 0;
-                }
-            }
-        }
-
-        return ans;
-    }
-
-    private boolean isAnsComplete() {
-        boolean isAnsComplete = true;
-        for (int i = 0; i < grid; i++) {
-            for (int j = 0; j < grid; j++) {
-                try {
-                    Integer.parseInt(buttons[i][j].getText());
-                } catch (NumberFormatException e) {
-                    isAnsComplete = false;
-                    break;
-                }
-            }
-        }
-        return isAnsComplete;
-    }
-
-    private void showMessage(String message) {
-        JLabel messageLabel = new JLabel();
-        messageLabel.setFont(new java.awt.Font("Tahoma", 1, 20));
-        messageLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        messageLabel.setText(message);
-        holder.removeAll();
-        holder.add(messageLabel);
-        holder.repaint();
-        this.setVisible(true);
-    }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuItem about;
     private javax.swing.JPanel base;
-    private javax.swing.JRadioButtonMenuItem beginner;
     private javax.swing.JPanel board;
-    private javax.swing.JMenuItem exit;
-    private javax.swing.JRadioButtonMenuItem expart;
     private javax.swing.JMenu game;
-    private javax.swing.JMenu help;
     private javax.swing.JPanel holder;
-    private javax.swing.JRadioButtonMenuItem intermediator;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JMenuBar menue;
     private javax.swing.JMenuItem newGame;
-    private javax.swing.JMenuItem newGame6X6;
     private javax.swing.JButton newGameBut;
     private javax.swing.JPanel options;
-    private javax.swing.JButton pause;
-    private javax.swing.JMenuItem resetGame;
-    private javax.swing.JButton resetGameBut;
-    private javax.swing.JButton resume;
-    private javax.swing.JButton submit;
-    private javax.swing.JLabel timeLabel;
 }
