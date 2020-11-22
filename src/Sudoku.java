@@ -150,9 +150,4 @@ public class Sudoku {
     public int[][] getNewPuzzle(int grid, int gameMode) {
         return createPuzzle(createBoard(VALID_BOARD_9X9), gameMode);
     }
-
-    public int[][] resetPuzzle() {
-        return puzzle;
-    }
-
 }
