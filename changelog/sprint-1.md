@@ -18,14 +18,14 @@
 
 ## Sprint 1 Backlog
 
-| ID  | Title/Desc                  | Asignee | Status |
-| --- | --------------------------- | ------- | ------ |
-| 1.1 | Membuat tampilan (9x9) grid | Nadine  | Done   |
-| 1.2 | Membuat subgrid (3x3)       | Nadine  | Done   |
-| 1.3 | Set angka hanya 1-9         | Sandi   | Done   |
-| 1.4 | Set hint (4x9 ubin)         | Sandi   |        |
-| 1.5 | Set hint read only          | Faiq    | Done   |
-| 1.6 | Random posisi hint          | Faiq    | Done   |
+| ID  | Title/Desc                  | Asignee | Status   |
+| --- | --------------------------- | ------- | -------- |
+| 1.1 | Membuat tampilan (9x9) grid | Nadine  | Done     |
+| 1.2 | Membuat subgrid (3x3)       | Nadine  | Done     |
+| 1.3 | Set angka hanya 1-9         | Sandi   | Done     |
+| 1.4 | Set hint (4x9 ubin)         | Sandi   | On going |
+| 1.5 | Set hint read only          | Faiq    | Done     |
+| 1.6 | Random posisi hint          | Faiq    | Done     |
 
 ## Retrospective
 
@@ -35,9 +35,9 @@ Sprint kemarin dianggap terlalu sedikit sehingga diperlukan adanya penyesuaian t
 
 | ID  | Title/Desc                            | Asignee |
 | --- | ------------------------------------- | ------- |
-| 2.1 | Masking ubin yang bukan hint          |         |
-| 2.2 | Set difficulty easy (hint 4x9)        |         |
-| 2.3 | Set difficulty medium (hint 2x9)      |         |
-| 2.4 | Set difficulty hard (hint 1x9)        |         |
-| 2.5 | Set baris kolom subgrid non duplicate |         |
-| 2.6 | Cek Koordinat dan cek jawaban         |         |
+| 2.1 | Set difficulty easy (hint 4x9)        |         |
+| 2.2 | Set difficulty medium (hint 2x9)      |         |
+| 2.3 | Set difficulty hard (hint 1x9)        |         |
+| 2.4 | Set baris kolom subgrid non duplicate |         |
+| 2.5 | Cek Koordinat dan cek jawaban         |         |
+| 2.6 | Ubah warna ubin yang udah diinput     |         |
