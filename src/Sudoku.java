@@ -147,54 +147,6 @@ public class Sudoku {
         return numOfEmptyBlock;
     }
 
-    // Check Is the sollution correct or Incorrect.
-    public boolean check(int[][] board) {
-        boolean isCorrect = true;
-        int numOfRowsInGrid = board.length == 9 ? 3 : 3;
-        final String setValues = board.length == 9 ? SET_VALUE_9X9 : SET_VALUE_9X9;
-        // check rows
-        for (int i = 0; i < board.length; i++) {
-            String set = setValues;
-            for (int j = 0; j < board.length; j++) {
-                set = set.replace("" + board[i][j], "");
-            }
-            if (!set.isEmpty()) {
-                isCorrect = false;
-                return isCorrect;
-            }
-        }
-
-        // check columns
-        for (int j = 0; j < board.length; j++) {
-            String set = setValues;
-            for (int i = 0; i < board.length; i++) {
-                set = set.replace("" + board[i][j], "");
-            }
-            if (!set.isEmpty()) {
-                isCorrect = false;
-                return isCorrect;
-            }
-        }
-
-        // check Horizontal and vertical grids
-        for (int hg = 0; hg < board.length; hg += numOfRowsInGrid) {
-            for (int vg = 0; vg < board[0].length; vg += 3) {
-                String set = setValues;
-                for (int i = hg; i < (hg + numOfRowsInGrid); i++) {
-                    for (int j = vg; j < vg + 3; j++) {
-                        set = set.replace("" + board[i][j], "");
-                    }
-                }
-                if (!set.isEmpty()) {
-                    isCorrect = false;
-                    return isCorrect;
-                }
-            }
-        }
-
-        return isCorrect;
-    }
-
     public int[][] getNewPuzzle(int grid, int gameMode) {
         return createPuzzle(createBoard(VALID_BOARD_9X9), gameMode);
     }
