@@ -35,9 +35,9 @@ Sprint kemarin dianggap terlalu sedikit sehingga diperlukan adanya penyesuaian t
 
 | ID  | Title/Desc                                                                   | Asignee |
 | --- | ---------------------------------------------------------------------------- | ------- |
-| 2.1 | Highlight ubin yang bernilai sama di 1 baris, 1 kolom, atau 1 subgrid        |         |
-| 2.2 | button reset/restart                                                         |         |
-| 2.3 | Menu Bar                                                                     |         |
-| 2.4 | Timer                                                                        |         |
-| 2.5 | Pause / Resume                                                               |         |
-| 2.6 | Highscore                                                                    |         |
+| 3.1 | Highlight ubin yang bernilai sama di 1 baris, 1 kolom, atau 1 subgrid        |         |
+| 3.2 | button reset/restart                                                         |         |
+| 3.3 | Menu Bar                                                                     |         |
+| 3.4 | Timer                                                                        |         |
+| 3.5 | Pause / Resume                                                               |         |
+| 3.6 | Highscore                                                                    |         |
