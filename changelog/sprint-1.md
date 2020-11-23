@@ -35,9 +35,9 @@ Sprint kemarin dianggap terlalu sedikit sehingga diperlukan adanya penyesuaian t
 
 | ID  | Title/Desc                            | Asignee |
 | --- | ------------------------------------- | ------- |
-| 2.1 | Set difficulty easy (hint 4x9)        |         |
-| 2.2 | Set difficulty medium (hint 2x9)      |         |
-| 2.3 | Set difficulty hard (hint 1x9)        |         |
-| 2.4 | Set baris kolom subgrid non duplicate |         |
-| 2.5 | Cek Koordinat dan cek jawaban         |         |
-| 2.6 | Ubah warna ubin yang udah diinput     |         |
+| 2.1 | Set difficulty easy (hint 4x9)        | Nadine  |
+| 2.2 | Set difficulty medium (hint 2x9)      | Nadine  |
+| 2.3 | Set difficulty hard (hint 1x9)        | Sandi   |
+| 2.4 | Set baris kolom subgrid non duplicate | Sandi   |
+| 2.5 | Cek Koordinat dan cek jawaban         | Faiq    |
+| 2.6 | Ubah warna ubin yang udah diinput     | Faiq    |
