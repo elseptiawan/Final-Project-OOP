@@ -50,7 +50,7 @@ public class SudokuUI extends javax.swing.JFrame {
 
         newGameBut.setBackground(new java.awt.Color(255, 255, 255));
         newGameBut.setFont(new java.awt.Font("Tahoma", 0, 12));
-        newGameBut.setText("New Game");
+        newGameBut.setText("Restart");
         newGameBut.setMargin(new java.awt.Insets(0, 0, 0, 0));
         newGameBut.setMaximumSize(new java.awt.Dimension(63, 19));
         newGameBut.setMinimumSize(new java.awt.Dimension(63, 19));
@@ -151,12 +151,7 @@ public class SudokuUI extends javax.swing.JFrame {
                 } else {
                     final JButton tempbutton = buttons[i][j];
                     final JPanel tempBlock = blocks[i][j];
-                    // actionListener[i][j] = new ActionListener() {
 
-                    // public void actionPerformed(ActionEvent e) {
-                    // // viewInputs(tempBlock, tempbutton, grid);
-                    // }
-                    // };
                     buttons[i][j].addActionListener(actionListener[i][j]);
                 }
                 buttons[i][j].setText(text);
