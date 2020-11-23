@@ -1,31 +1,43 @@
-# Scrum Report (Sprint 2)
-| From dd/mm/yyyy to dd/mm/yyyy
+# Scrum Report (Sprint 1)
 
-## Team (Insert your name)
-| NPM           | Name        |
-| ------------- |-------------|
-| 140810xx00xx  | John Doe    |
-| 140810xx00xx  | Jane Doe    |
-| 140810xx00xx  | Lorem Ipsum |
+| From 22/11/2020 to 29/11/2020
+
+## Team
+
+| NPM          | Name                   |
+| ------------ | ---------------------- |
+| 140810190004 | Nadine Annisa Heartman |
+| 140810190012 | M Faiq Al Murtadha     |
+| 140810190050 | Elshandi Septiawan     |
 
 ## Sprint Overview
-| Planned (n)   | Completed (n) |
-| ------------- |-------------- |
-| n             | n             |
+
+| Planned (n) | Completed (n) |
+| ----------- | ------------- |
+| 6           |               |
 
 ## Sprint 2 Backlog
 
-| ID  | Title/Desc | Asignee | Status |
-| --- | ---------- | ------- | ------ |
-| 2.1 | Preparing the x | Jane Doe | DONE |
-| 2.2 | Make the x | John Doe | FAILED |
+| ID  | Title/Desc                            | Asignee | Status   |
+| --- | ------------------------------------- | ------- | -------- |
+| 2.1 | Set difficulty easy (hint 4x9)        | Nadine  |          |
+| 2.2 | Set difficulty medium (hint 2x9)      | Nadine  |          |
+| 2.3 | Set difficulty hard (hint 1x9)        | Sandi   |          |
+| 2.4 | Set baris kolom subgrid non duplicate | Sandi   |          |
+| 2.5 | Cek Koordinat dan cek jawaban         | Faiq    |          |
+| 2.6 | Ubah warna ubin yang udah diinput     | Faiq    |          |
 
-## Retrospective 
+## Retrospective
 
 Sprint kemarin dianggap terlalu sedikit sehingga diperlukan adanya penyesuaian tugas. Lorem ipsum dolor sit amet
 
 ## Next Sprint Backlog (Sprint 3)
-| ID  | Title/Desc | Asignee | 
-| --- | ---------- | ------- | 
-| 3.1 | Preparing the x | Jane Doe | 
-| 3.2 | Make the x | John Doe | 
+
+| ID  | Title/Desc                                                                   | Asignee |
+| --- | ---------------------------------------------------------------------------- | ------- |
+| 2.1 | Highlight ubin yang bernilai sama di 1 baris, 1 kolom, atau 1 subgrid        |         |
+| 2.2 | button reset/restart                                                         |         |
+| 2.3 | Menu Bar                                                                     |         |
+| 2.4 | Timer                                                                        |         |
+| 2.5 | Pause / Resume                                                               |         |
+| 2.6 | Highscore                                                                    |         |
