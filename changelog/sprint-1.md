@@ -2,13 +2,6 @@
 
 | From 17/11/2020 to 22/11/2020
 
-- Membuat grid 9x9 dan subgrid 3x3
-- Membedakan warna subgrid yang bersebelahan
-- Membuat setiap ubin berisi angka 1-9
-- Membuat beberapa ubin sudah berisi angka
-- Membuat ubin yang sudah berisi angka tidak bisa diubah (read only)
-- Membuat ubin berisi angka menjadi randon ketika di klik New Game
-
 ## Team
 
 | NPM          | Name                   |
