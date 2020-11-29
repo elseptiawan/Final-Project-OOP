@@ -147,7 +147,59 @@ public class Sudoku {
         return numOfEmptyBlock;
     }
 
+    public boolean check(int[][] board){
+        boolean isCorrect = true;
+        int numOfRowsInGrid = board.length == 9 ? 3 : 2;
+        final String setValues = board.length == 9 ? SET_VALUE_9X9 : SET_VALUE_9X9;
+        //check rows
+        for (int i = 0; i < board.length; i++){
+            String set = setValues;
+            for (int j = 0; j <board.length; j++){
+                set = set.replace("" + board[i][j], "");
+            }
+            if (!set.isEmpty()){
+                isCorrect = false;
+                return isCorrect;
+            }
+        }
+        //check columns
+        for (int j = 0; j < board.length; j++){
+            String set = setValues;
+            for (int i = 0; i < board.length; i++){
+                set = set.replace("" + board[i][j],"");
+            }
+            if (!set.isEmpty()){
+                isCorrect = false;
+                return isCorrect;
+            }
+        }
+        //check horizontal and vertical
+        for (int hg = 0; hg <board.length; hg += numOfRowsInGrid){
+            for (int vg = 0; vg < board[0].length; vg += 3){
+                String set = setValues;
+                for (int i = hg; i < (hg + numOfRowsInGrid); i++){
+                    for (int j = vg; j <vg + 3; j++){
+                        set = set.replace("" + board[i][j], "");
+                    }
+                }
+                if (!set.isEmpty()){
+                    isCorrect = false;
+                    return isCorrect;
+                }
+            }
+        }
+        return isCorrect;
+    }
     public int[][] getNewPuzzle(int grid, int gameMode) {
         return createPuzzle(createBoard(VALID_BOARD_9X9), gameMode);
+    }
+    private void printArray(int[][] a){
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a[i].length; j++) {
+                System.out.print(a[i][j] + "\t");
+            }
+            System.out.println();
+        }
+        System.out.println();
     }
 }
