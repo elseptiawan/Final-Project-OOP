@@ -24,8 +24,8 @@
 | 2.2 | Set difficulty medium (hint 2x9)      | Nadine  |          |
 | 2.3 | Set difficulty hard (hint 1x9)        | Sandi   |          |
 | 2.4 | Set baris kolom subgrid non duplicate | Sandi   |          |
-| 2.5 | Cek Koordinat dan cek jawaban         | Faiq    |          |
-| 2.6 | Ubah warna ubin yang udah diinput     | Faiq    |          |
+| 2.5 | Cek Koordinat dan cek jawaban         | Faiq    |Done|
+| 2.6 | Ubah warna ubin yang udah diinput     | Faiq    |Done|
 
 ## Retrospective
 
