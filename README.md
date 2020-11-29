@@ -1,4 +1,4 @@
-# Project Name
+# SUDOKU
 
 This repository is a final project (Java GUI) from Object-Oriented Programming Class, Teknik Informatika Universitas Padjadjaran.
 
@@ -19,21 +19,47 @@ This repository is a final project (Java GUI) from Object-Oriented Programming C
 - **[Sprint Planning](changelog/sprint-planning.md) - (planning date)**
 
   - Membuat Sprint backlog sari awal hingga akhir
+  - Mencari referensi tentang permainan sudoku sekaligus mempelajari dari referensi yang telah dicari
   - Scrum meeting untuk menentukan sprint backlog
 
-- **[Sprint 1](changelog/sprint-1.md) - (date from x until x)**
+- **[Sprint 1](changelog/sprint-1.md) - (date from 17 until 22)**
 
-  - Short changes 1
-  - Short changes 2
+  - Membuat tampilan ( 9 x 9 ) grid
+  - Membuat subgrid ( 3 x 3 )
+  - Mengeset angka agar hanya angka 1 sampai 9
+  - Mengeset hint ( 4 x 9 ubin )
+  - Mengeset hint read only
+  - Membuat random posisi hint
 
-- **[Sprint 2](changelog/sprint-2.md) - (date from x until x)**
-  - Short changes 1
-  - Short changes 2
-- **[Sprint 3](changelog/sprint-3.md) - (date from x until x)**
-  - Short changes 1
-  - Short changes 2
+- **[Sprint 2](changelog/sprint-2.md) - (date from 22 until 29)**
+
+  - Mengeset difficulty easy / tingkat kesulitan : mudah ( hint 4 x 9 )
+  - Mengeset difficulty medium / tingkat kesulitan : sedang ( hint 2 x 9 )
+  - Mengeset difficulty hard / tingkat kesulitan : susah ( hint 1 x 9 )
+  - Mengeset baris kolom subgrid non duplicate
+  - Mengecek koordinat dan mengecek jawaban
+  - Mengubah warna ubin yang sudah diinput
+  
+- **[Sprint 3](changelog/sprint-3.md) - (date from 30 until 6)**
+
+  - Menghighlight ubin yang bernilai sama di 1 baris, 1 kolom, dan 1 subgrid
+  - Membuat tampilan button reset atau restart
+  - Membuat tampilan menu bar
+  - Mengatur permainan agar menggunakan timer
+  - Membuat tampilan pause atau resume
+  - Membuat tampilan highscore
 
 ## Running The App
+
+
+
+## Classes Used
+
+TO;DO
+
+UML image here
+
+## Notable Assumption and Design App Details
 
 - Tampilkan grid ubin dengan besar 9 x 9 yang terdiri dari 3 x 3 sub-grids dimana ubin adalah komponen drawing board.
 - Acak angka di dalam ubin dengan syarat unik (tidak ada angka yang sama pada 1 baris, 1 kolom, dan 1 sub-grids).
@@ -45,13 +71,3 @@ This repository is a final project (Java GUI) from Object-Oriented Programming C
   - Apakah nilai yang dimasukan pada ubin sesuai dengan jawaban, jika sesuai maka ubah warna tulisan menjadi hijau, jika tidak sesuai maka ubah menjadi warna merah.
   - Highlight ubin yang sudah berisi angka, jika dalam 1 baris, 1 kolom, atau 1 sub-grids berisi angka yang sama dengan inputan user.
 - Buat button “Reset/Restart” untuk mengacak ulang grid dan memulai game baru.
-
-## Classes Used
-
-TO;DO
-
-UML image here
-
-## Notable Assumption and Design App Details
-
-TO;DO
