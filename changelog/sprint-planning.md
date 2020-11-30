@@ -2,7 +2,7 @@
 
 | 17/11/2020
 
-### Team (Insert your name)
+### Kelompok-4
 
 | NPM          | Name                   |
 | ------------ | ---------------------- |
@@ -26,17 +26,17 @@
 | 2.4 | Set baris kolom subgrid non duplicate                                 | Sandi   |
 | 2.5 | Cek Koordinat dan cek jawaban                                         | Faiq    |
 | 2.6 | Ubah warna ubin yang udah diinput                                     | Faiq    |
-| 3.1 | Highlight ubin yang bernilai sama di 1 baris, 1 kolom, atau 1 subgrid |         |
-| 3.2 | button reset/restart                                                  |         |
+| 3.1 | Highlight ubin yang bernilai sama di 1 baris, 1 kolom, atau 1 subgrid | Nadine  |
+| 3.2 | button reset/restart                                                  | Nadine  |
 
 ## Opsional
 
 | ID  | Title/Desc    | Asignee |
 | --- | ------------- | ------- |
-| 3.3 | Menu Bar      |         |
-| 3.4 | Timer         |         |
-| 3.5 | Pause /Resume |         |
-| 3.6 | Highscore     |         |
+| 3.3 | Menu Bar      | Sandi   |
+| 3.4 | Timer         | Sandi   |
+| 3.5 | Pause /Resume | Faiq    |
+| 3.6 | Highscore     | Faiq    |
 
 ## Sprint Backlog Plan (Sprint 1)
 
