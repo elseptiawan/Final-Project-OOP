@@ -248,7 +248,7 @@ public class SudokuUI extends javax.swing.JFrame {
             boolean isAnsCorrect = sudoku.check(getAns());
             String messageStr = "";
             if (isAnsCorrect) {
-                messageStr = "Congratulation You have won the Game in " + timeLabel.getText();
+                messageStr = "Congratulation You have won the Game";
             } else {
                 messageStr = "Sorry You have failed. ";
             }
