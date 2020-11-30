@@ -51,7 +51,11 @@ This repository is a final project (Java GUI) from Object-Oriented Programming C
 
 ## Running The App
 
-
+- Compile Sudoku.java (javac Sudoku.java)
+- Compile SudokuUI.java (javac SudokuUI.java)
+- Compile Inputs.java (javac Inputs.java)
+- Compile Main.java (javac Main.java)
+- Jalankan program (java Main)
 
 ## Classes Used
 
