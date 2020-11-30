@@ -10,6 +10,8 @@ public class Sudoku {
 
     public static final int GRID_9X9 = 9;
     public static final int GAME_MODE_EASY = 45;
+    public static final int GAME_MODE_HARD = 72;
+    public static final int GAME_MODE_MEDIUM = 63;
     public static final int DEFAULT_TOLERANCE = 5;
     public static final String SET_VALUE_9X9 = "123456789";
 
@@ -139,10 +141,13 @@ public class Sudoku {
         int numOfEmptyBlock = 0;
         int numOfBlock = board.length * board[0].length;
 
-        numOfEmptyBlock = (int) Math.floor((GAME_MODE_EASY * numOfBlock) / 100);
-
+        if (GAME_MODE_EASY <= mode && mode <= GAME_MODE_HARD) {
+            numOfEmptyBlock = (int) Math.floor((mode * numOfBlock) / 100);
+        } else {
+            numOfEmptyBlock = (int) Math.floor((GAME_MODE_MEDIUM * numOfBlock) / 100);
+        }
         int tolerance = (int) Math.floor(((numOfBlock - numOfEmptyBlock) * 5) / 100);
-        numOfEmptyBlock += random.nextInt(tolerance + 1); // to avoid negetive
+        numOfEmptyBlock += random.nextInt(tolerance + 1); // to avoid negetive 
 
         return numOfEmptyBlock;
     }

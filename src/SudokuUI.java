@@ -58,6 +58,9 @@ public class SudokuUI extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         exit = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        beginner = new javax.swing.JRadioButtonMenuItem();
+        intermediator = new javax.swing.JRadioButtonMenuItem();
+        expart = new javax.swing.JRadioButtonMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sudoku");
@@ -164,6 +167,38 @@ public class SudokuUI extends javax.swing.JFrame {
         });
         game.add(exit);
 
+        menue.add(game);
+
+        jMenu2.setText("Level");
+
+        beginner.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.CTRL_MASK));
+        beginner.setText("Easy");
+        beginner.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                beginnerActionPerformed(evt);
+            }
+        });
+        jMenu2.add(beginner);
+
+        intermediator.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_I, java.awt.event.InputEvent.CTRL_MASK));
+        intermediator.setSelected(true);
+        intermediator.setText("Medium");
+        intermediator.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                intermediatorActionPerformed(evt);
+            }
+        });
+        jMenu2.add(intermediator);
+
+        expart.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_MASK));
+        expart.setText("Hard");
+        expart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                expartActionPerformed(evt);
+            }
+        });
+        jMenu2.add(expart);
+
         menue.add(jMenu2);
 
         setJMenuBar(menue);
@@ -197,6 +232,18 @@ public class SudokuUI extends javax.swing.JFrame {
         int[][] puzzle = sudoku.getNewPuzzle(grid, gameMode);
         createBoard(puzzle);
     }//GEN-LAST:event_beginnerActionPerformed
+
+    private void intermediatorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_intermediatorActionPerformed
+        gameMode = Sudoku.GAME_MODE_MEDIUM;
+        int[][] puzzle = sudoku.getNewPuzzle(grid, gameMode);
+        createBoard(puzzle);
+    }//GEN-LAST:event_intermediatorActionPerformed
+
+    private void expartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_expartActionPerformed
+        gameMode = Sudoku.GAME_MODE_HARD;
+        int[][] puzzle = sudoku.getNewPuzzle(grid, gameMode);
+        createBoard(puzzle);
+    }//GEN-LAST:event_expartActionPerformed
 
     private void newGameButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newGameButActionPerformed
         int[][] puzzle = sudoku.getNewPuzzle(grid, gameMode);
