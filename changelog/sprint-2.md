@@ -14,7 +14,7 @@
 
 | Planned (n) | Completed (n) |
 | ----------- | ------------- |
-| 6           |               |
+| 6           |  6            |
 
 ## Sprint 2 Backlog
 
