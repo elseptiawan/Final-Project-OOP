@@ -1,8 +1,8 @@
-# Scrum Report (Sprint 1)
+# Scrum Report (Sprint 2)
 
 | From 22/11/2020 to 29/11/2020
 
-## Team
+## Kelompok-4
 
 | NPM          | Name                   |
 | ------------ | ---------------------- |
