@@ -29,7 +29,7 @@
 
 ## Retrospective
 
-Sprint kemarin dianggap terlalu sedikit sehingga diperlukan adanya penyesuaian tugas. Lorem ipsum dolor sit amet
+Pada sprint 1 kami mulai mencari referensi dan mulai mengerjakan projek melalui media google meet, tetapi belum terlalu memahami secara rinci dikarenakan banyak kesibukan lain, sehingga belum mencapai target yang ditentukan (yaitu set hint 4x9 ubin masih on going).
 
 ## Next Sprint Backlog (Sprint 2)
 
