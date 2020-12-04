@@ -14,15 +14,15 @@
 
 | Planned (n) | Completed (n) |
 | ----------- | ------------- |
-| 6           |  6            |
+| 6           |  3            |
 
 ## Sprint 2 Backlog
 
 | ID  | Title/Desc                            | Asignee | Status   |
 | --- | ------------------------------------- | ------- | -------- |
-| 2.1 | Set difficulty easy (hint 4x9)        | Nadine  |Done|
-| 2.2 | Set difficulty medium (hint 2x9)      | Nadine  |Done|
-| 2.3 | Set difficulty hard (hint 1x9)        | Sandi   |Done|
+| 2.1 | Set difficulty easy (hint 4x9)        | Nadine  |60%|
+| 2.2 | Set difficulty medium (hint 2x9)      | Nadine  |60%|
+| 2.3 | Set difficulty hard (hint 1x9)        | Sandi   |60%|
 | 2.4 | Set baris kolom subgrid non duplicate | Sandi   |Done|
 | 2.5 | Cek Koordinat dan cek jawaban         | Faiq    |Done|
 | 2.6 | Ubah warna ubin yang udah diinput     | Faiq    |Done|
