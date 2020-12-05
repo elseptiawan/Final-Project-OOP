@@ -1,11 +1,8 @@
-import java.awt.GridLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
+import javax.swing.*;
 
 public class SudokuUI extends javax.swing.JFrame {
 
@@ -38,28 +35,28 @@ public class SudokuUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        base = new javax.swing.JPanel();
-        options = new javax.swing.JPanel();
-        newGameBut = new javax.swing.JButton();
-        resetGameBut = new javax.swing.JButton();
-        pause = new javax.swing.JButton();
-        timeLabel = new javax.swing.JLabel();
-        resume = new javax.swing.JButton();
-        submit = new javax.swing.JButton();
-        holder = new javax.swing.JPanel();
-        board = new javax.swing.JPanel();
-        menue = new javax.swing.JMenuBar();
-        game = new javax.swing.JMenu();
-        newGame = new javax.swing.JMenuItem();
-        resetGame = new javax.swing.JMenuItem();
-        jSeparator1 = new javax.swing.JPopupMenu.Separator();
-        exit = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        beginner = new javax.swing.JRadioButtonMenuItem();
-        intermediator = new javax.swing.JRadioButtonMenuItem();
-        expart = new javax.swing.JRadioButtonMenuItem();
-        help = new javax.swing.JMenu();
-        about = new javax.swing.JMenuItem();
+        base = new JPanel();
+        options = new JPanel();
+        newGameBut = new JButton();
+        resetGameBut = new JButton();
+        pause = new JButton();
+        timeLabel = new JLabel();
+        resume = new JButton();
+        submit = new JButton();
+        holder = new JPanel();
+        board = new JPanel();
+        menue = new JMenuBar();
+        game = new JMenu();
+        newGame = new JMenuItem();
+        resetGame = new JMenuItem();
+        jSeparator1 = new JPopupMenu.Separator();
+        exit = new JMenuItem();
+        jMenu2 = new JMenu();
+        beginner = new JRadioButtonMenuItem();
+        intermediator = new JRadioButtonMenuItem();
+        expart = new JRadioButtonMenuItem();
+        help = new JMenu();
+        about = new JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sudoku");
@@ -491,27 +488,27 @@ public class SudokuUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuItem about;
-    private javax.swing.JPanel base;
-    private javax.swing.JRadioButtonMenuItem beginner;
-    private javax.swing.JPanel board;
-    private javax.swing.JMenuItem exit;
-    private javax.swing.JRadioButtonMenuItem expart;
-    private javax.swing.JMenu game;
-    private javax.swing.JMenu help;
-    private javax.swing.JPanel holder;
-    private javax.swing.JRadioButtonMenuItem intermediator;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JPopupMenu.Separator jSeparator1;
-    private javax.swing.JMenuBar menue;
-    private javax.swing.JMenuItem newGame;
-    private javax.swing.JButton newGameBut;
-    private javax.swing.JPanel options;
-    private javax.swing.JButton pause;
-    private javax.swing.JMenuItem resetGame;
-    private javax.swing.JButton resetGameBut;
-    private javax.swing.JButton resume;
-    private javax.swing.JButton submit;
-    private javax.swing.JLabel timeLabel;
+    private JMenuItem about;
+    private JPanel base;
+    private JRadioButtonMenuItem beginner;
+    private JPanel board;
+    private JMenuItem exit;
+    private JRadioButtonMenuItem expart;
+    private JMenu game;
+    private JMenu help;
+    private JPanel holder;
+    private JRadioButtonMenuItem intermediator;
+    private JMenu jMenu2;
+    private JPopupMenu.Separator jSeparator1;
+    private JMenuBar menue;
+    private JMenuItem newGame;
+    private JButton newGameBut;
+    private JPanel options;
+    private JButton pause;
+    private JMenuItem resetGame;
+    private JButton resetGameBut;
+    private JButton resume;
+    private JButton submit;
+    private JLabel timeLabel;
     // End of variables declaration//GEN-END:variables
 }

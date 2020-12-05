@@ -31,15 +31,15 @@ public class Inputs extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        one = new javax.swing.JButton();
-        two = new javax.swing.JButton();
-        three = new javax.swing.JButton();
-        four = new javax.swing.JButton();
-        five = new javax.swing.JButton();
-        six = new javax.swing.JButton();
-        seven = new javax.swing.JButton();
-        eight = new javax.swing.JButton();
-        nine = new javax.swing.JButton();
+        one = new JButton();
+        two = new JButton();
+        three = new JButton();
+        four = new JButton();
+        five = new JButton();
+        six = new JButton();
+        seven = new JButton();
+        eight = new JButton();
+        nine = new JButton();
 
         setLayout(new java.awt.GridLayout(3, 3));
 
@@ -167,15 +167,15 @@ public class Inputs extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton eight;
-    private javax.swing.JButton five;
-    private javax.swing.JButton four;
-    private javax.swing.JButton nine;
-    private javax.swing.JButton one;
-    private javax.swing.JButton seven;
-    private javax.swing.JButton six;
-    private javax.swing.JButton three;
-    private javax.swing.JButton two;
+    private JButton eight;
+    private JButton five;
+    private JButton four;
+    private JButton nine;
+    private JButton one;
+    private JButton seven;
+    private JButton six;
+    private JButton three;
+    private JButton two;
     // End of variables declaration//GEN-END:variables
 
 }
