@@ -16,14 +16,17 @@ public class SudokuUI extends javax.swing.JFrame {
     private int gameMode;
     private int grid;
     private boolean paused;
+    private final StopWatch stopWatch;
 
     /** Creates new form UI */
     public SudokuUI() {
         sudoku = new Sudoku();
         grid = Sudoku.GRID_9X9;
+        stopWatch = new StopWatch();
         paused = false;
         initComponents();
         initialize();
+        startTimer();
     }
 
     /** This method is called from within the constructor to
@@ -39,6 +42,9 @@ public class SudokuUI extends javax.swing.JFrame {
         options = new javax.swing.JPanel();
         newGameBut = new javax.swing.JButton();
         resetGameBut = new javax.swing.JButton();
+        pause = new javax.swing.JButton();
+        timeLabel = new javax.swing.JLabel();
+        resume = new javax.swing.JButton();
         submit = new javax.swing.JButton();
         holder = new javax.swing.JPanel();
         board = new javax.swing.JPanel();
@@ -52,6 +58,8 @@ public class SudokuUI extends javax.swing.JFrame {
         beginner = new javax.swing.JRadioButtonMenuItem();
         intermediator = new javax.swing.JRadioButtonMenuItem();
         expart = new javax.swing.JRadioButtonMenuItem();
+        help = new javax.swing.JMenu();
+        about = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sudoku");
@@ -78,6 +86,42 @@ public class SudokuUI extends javax.swing.JFrame {
             }
         });
 
+        resetGameBut.setBackground(new java.awt.Color(255, 255, 255));
+        resetGameBut.setFont(new java.awt.Font("Tahoma", 0, 12));
+        resetGameBut.setText("Reset Game");
+        resetGameBut.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        resetGameBut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resetGameButActionPerformed(evt);
+            }
+        });
+
+        pause.setBackground(new java.awt.Color(255, 255, 255));
+        pause.setFont(new java.awt.Font("Tahoma", 0, 12));
+        pause.setText("Pause");
+        pause.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        pause.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pauseActionPerformed(evt);
+            }
+        });
+
+        timeLabel.setFont(new java.awt.Font("Tahoma", 0, 24));
+        timeLabel.setForeground(new java.awt.Color(51, 51, 51));
+        timeLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        timeLabel.setText("00:00:000");
+        timeLabel.setIconTextGap(0);
+
+        resume.setBackground(new java.awt.Color(255, 255, 255));
+        resume.setFont(new java.awt.Font("Tahoma", 0, 12));
+        resume.setText("Resume");
+        resume.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        resume.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resumeActionPerformed(evt);
+            }
+        });
+
         submit.setBackground(new java.awt.Color(255, 255, 255));
         submit.setFont(new java.awt.Font("Tahoma", 0, 12));
         submit.setText("Submit");
@@ -94,15 +138,26 @@ public class SudokuUI extends javax.swing.JFrame {
             .addGroup(optionsLayout.createSequentialGroup()
                 .addComponent(newGameBut, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(resetGameBut, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pause, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(resume, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(submit, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+                .addComponent(timeLabel)
                 .addContainerGap())
         );
         optionsLayout.setVerticalGroup(
             optionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(optionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(newGameBut, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
+                .addComponent(resetGameBut, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
+                .addComponent(pause, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
+                .addComponent(resume, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
                 .addComponent(submit, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(timeLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 25, Short.MAX_VALUE)
         );
 
         holder.setBackground(new java.awt.Color(255, 255, 255));
@@ -147,6 +202,13 @@ public class SudokuUI extends javax.swing.JFrame {
                 newGameActionPerformed(evt);
             }
         });
+        resetGame.setText("Reset Game");
+        resetGame.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resetGameActionPerformed(evt);
+            }
+        });
+        game.add(resetGame);
         game.add(newGame);
         game.add(jSeparator1);
 
@@ -192,6 +254,18 @@ public class SudokuUI extends javax.swing.JFrame {
 
         menue.add(jMenu2);
 
+        help.setText("Help");
+
+        about.setText("About");
+        about.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                aboutActionPerformed(evt);
+            }
+        });
+        help.add(about);
+
+        menue.add(help);
+
         setJMenuBar(menue);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -213,6 +287,11 @@ public class SudokuUI extends javax.swing.JFrame {
         int[][] puzzle = sudoku.getNewPuzzle(grid, gameMode);
         createBoard(puzzle);
     }//GEN-LAST:event_newGameActionPerformed
+
+    private void resetGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetGameActionPerformed
+        int[][] puzzle = sudoku.resetPuzzle();
+        createBoard(puzzle);
+    }//GEN-LAST:event_resetGameActionPerformed
 
     private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
         System.exit(0);
@@ -236,6 +315,26 @@ public class SudokuUI extends javax.swing.JFrame {
         createBoard(puzzle);
     }//GEN-LAST:event_expartActionPerformed
 
+    private void pauseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pauseActionPerformed
+        stopWatch.pause();
+        paused = true;
+        showMessage("Paused");
+    }//GEN-LAST:event_pauseActionPerformed
+
+    private void resumeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resumeActionPerformed
+        stopWatch.resume();
+        paused = false;
+        holder.removeAll();
+        holder.add(board);
+        holder.repaint();
+        this.setVisible(true);
+    }//GEN-LAST:event_resumeActionPerformed
+
+    private void resetGameButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetGameButActionPerformed
+        int[][] puzzle = sudoku.resetPuzzle();
+        createBoard(puzzle);
+    }//GEN-LAST:event_resetGameButActionPerformed
+
     private void newGameButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newGameButActionPerformed
         int[][] puzzle = sudoku.getNewPuzzle(grid, gameMode);
         createBoard(puzzle);
@@ -245,10 +344,11 @@ public class SudokuUI extends javax.swing.JFrame {
         if (!isAnsComplete()) {
             JOptionPane.showMessageDialog(this, "Please complete your answer.");
         } else {
+            stopWatch.stop();
             boolean isAnsCorrect = sudoku.check(getAns());
             String messageStr = "";
             if (isAnsCorrect) {
-                messageStr = "Congratulation You have won the Game";
+                messageStr = "Congratulation You have won the Game in " + timeLabel.getText();
             } else {
                 messageStr = "Sorry You have failed. ";
             }
@@ -257,7 +357,7 @@ public class SudokuUI extends javax.swing.JFrame {
     }//GEN-LAST:event_submitActionPerformed
 
     private void aboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutActionPerformed
-        JOptionPane.showMessageDialog(this, "Version: 1.0.0\nAuthor: Hasib\nInstitute: Shahjalal University of Science and Technology");
+        JOptionPane.showMessageDialog(this, "Versi : 1.0.0\nDibuat Oleh :\n- Nadine A. Heartman [140810190004]\n- M. Faiq Al-Murtadha A.R.A [140810190012]\n- Elshandi Septiawan [140810190050]\nKelas B\nTeknik Informatika\nUniversitas Padjadjaran");
     }//GEN-LAST:event_aboutActionPerformed
 
     private void createBoard(int[][] puzzle) {
@@ -309,6 +409,7 @@ public class SudokuUI extends javax.swing.JFrame {
         board.repaint();
         holder.repaint();
         this.setVisible(true);
+        stopWatch.start();
     }
 
     private void initialize() {
@@ -373,7 +474,22 @@ public class SudokuUI extends javax.swing.JFrame {
         this.setVisible(true);
     }
 
-    
+    private void startTimer() {
+        Thread thread = new Thread(new Runnable() {
+
+            public void run() {
+                stopWatch.start();
+                while (true) {
+                    if (!paused) {
+                        final String timeString = new SimpleDateFormat("mm:ss:SSS").format(stopWatch.getElapsedTime());
+                        timeLabel.setText("" + timeString);
+                    }
+                }
+            }
+        });
+        thread.start();
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem about;
     private javax.swing.JPanel base;
@@ -389,7 +505,6 @@ public class SudokuUI extends javax.swing.JFrame {
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JMenuBar menue;
     private javax.swing.JMenuItem newGame;
-    private javax.swing.JMenuItem newGame6X6;
     private javax.swing.JButton newGameBut;
     private javax.swing.JPanel options;
     private javax.swing.JButton pause;
