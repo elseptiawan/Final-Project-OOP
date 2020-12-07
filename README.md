@@ -60,8 +60,6 @@ This repository is a final project (Java GUI) from Object-Oriented Programming C
 
 ## Classes Used
 
-TO;DO
-
 ![UML](/images/umlSudoku.png)
 
 ## Notable Assumption and Design App Details
