@@ -39,7 +39,7 @@ This repository is a final project (Java GUI) from Object-Oriented Programming C
   - Mengeset baris kolom subgrid non duplicate
   - Mengecek koordinat dan mengecek jawaban
   - Mengubah warna ubin yang sudah diinput
-  
+
 - **[Sprint 3](changelog/sprint-3.md) - (date from 30 until 6)**
 
   - Menghighlight ubin yang bernilai sama di 1 baris, 1 kolom, dan 1 subgrid
@@ -54,6 +54,7 @@ This repository is a final project (Java GUI) from Object-Oriented Programming C
 - Compile Sudoku.java (javac Sudoku.java)
 - Compile SudokuUI.java (javac SudokuUI.java)
 - Compile Inputs.java (javac Inputs.java)
+- Compile StopWatch.java (javac StopWatch.java)
 - Compile Main.java (javac Main.java)
 - Jalankan program (java Main)
 
