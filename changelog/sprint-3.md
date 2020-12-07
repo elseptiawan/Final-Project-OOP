@@ -14,19 +14,19 @@
 
 | Planned (n) | Completed (n) |
 | ----------- | ------------- |
-| 6           |               |
+| 6           | 3             |
 
 ## Sprint 3 Backlog
 
-| ID  | Title/Desc                            										                  | Asignee | Status   |
-| --- | --------------------------------------------------------------------------- | ------- | -------- |
-| 3.1 | Highlight ubin yang bernilai sama di 1 baris, 1 kolom atau 1 subgrid        | Nadine  |          |
-| 3.2 | Button reset/restart      													                        | Nadine  |          |
-| 3.3 | Menu Bar        															                              | Sandi   |          |
-| 3.4 | Timer 																		                                  | Sandi   |          |
-| 3.5 | Pause/Resume         														                            | Faiq    |          |
-| 3.6 | Highscore     																                              | Faiq    |          |
+| ID  | Title/Desc                                                           | Asignee | Status |
+| --- | -------------------------------------------------------------------- | ------- | ------ |
+| 3.1 | Highlight ubin yang bernilai sama di 1 baris, 1 kolom atau 1 subgrid | Nadine  | 30%    |
+| 3.2 | Button reset/restart                                                 | Nadine  | done   |
+| 3.3 | Menu Bar                                                             | Sandi   | done   |
+| 3.4 | Timer                                                                | Sandi   | done   |
+| 3.5 | Pause/Resume                                                         | Faiq    | 90%    |
+| 3.6 | Highscore                                                            | Faiq    | failed |
 
 ## Retrospective
 
-Sprint kemarin dianggap terlalu sedikit sehingga diperlukan adanya penyesuaian tugas. Lorem ipsum dolor sit amet
+Untuk highlight ubin belom bisa membedakan jawaban yang benar dan yang salah. Untuk pause/resume ketika button resume nya diklik, timernya tidak berjalan. Untuk highscore tidak jadi kami buat karena keterbatasan waktu dan kemampuan yang kami miliki.
