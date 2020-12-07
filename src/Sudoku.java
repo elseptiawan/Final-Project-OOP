@@ -9,10 +9,9 @@ public class Sudoku {
             { 1, 6, 8, 3, 9, 2, 5, 7, 4 } };
 
     public static final int GRID_9X9 = 9;
-    public static final int GAME_MODE_EASY = 45;
-    public static final int GAME_MODE_HARD = 72;
-    public static final int GAME_MODE_MEDIUM = 63;
-    public static final int DEFAULT_TOLERANCE = 5;
+    public static final int GAME_MODE_EASY = 4;
+    public static final int GAME_MODE_HARD = 1;
+    public static final int GAME_MODE_MEDIUM = 2;
     public static final String SET_VALUE_9X9 = "123456789";
 
     private int[][] puzzle;
@@ -138,56 +137,51 @@ public class Sudoku {
 
     // Define number of empty blocks according to game mode.
     private int getNumberOfEmptyBlock(int[][] board, int mode) {
-        int numOfEmptyBlock = 0;
+        int numOfEmptyBlock = mode;
         int numOfBlock = board.length * board[0].length;
 
-        if (GAME_MODE_EASY <= mode && mode <= GAME_MODE_HARD) {
-            numOfEmptyBlock = (int) Math.floor((mode * numOfBlock) / 100);
-        } else {
-            numOfEmptyBlock = (int) Math.floor((GAME_MODE_MEDIUM * numOfBlock) / 100);
-        }
-        int tolerance = (int) Math.floor(((numOfBlock - numOfEmptyBlock) * 5) / 100);
-        numOfEmptyBlock += random.nextInt(tolerance + 1); // to avoid negetive 
+        int tolerance = numOfBlock - numOfEmptyBlock;
+        numOfEmptyBlock += random.nextInt(tolerance + 1); // to avoid negetive
 
         return numOfEmptyBlock;
     }
 
-    public boolean check(int[][] board){
+    public boolean check(int[][] board) {
         boolean isCorrect = true;
         int numOfRowsInGrid = board.length == 9 ? 3 : 2;
         final String setValues = board.length == 9 ? SET_VALUE_9X9 : SET_VALUE_9X9;
-        //check rows
-        for (int i = 0; i < board.length; i++){
+        // check rows
+        for (int i = 0; i < board.length; i++) {
             String set = setValues;
-            for (int j = 0; j <board.length; j++){
+            for (int j = 0; j < board.length; j++) {
                 set = set.replace("" + board[i][j], "");
             }
-            if (!set.isEmpty()){
+            if (!set.isEmpty()) {
                 isCorrect = false;
                 return isCorrect;
             }
         }
-        //check columns
-        for (int j = 0; j < board.length; j++){
+        // check columns
+        for (int j = 0; j < board.length; j++) {
             String set = setValues;
-            for (int i = 0; i < board.length; i++){
-                set = set.replace("" + board[i][j],"");
+            for (int i = 0; i < board.length; i++) {
+                set = set.replace("" + board[i][j], "");
             }
-            if (!set.isEmpty()){
+            if (!set.isEmpty()) {
                 isCorrect = false;
                 return isCorrect;
             }
         }
-        //check horizontal and vertical
-        for (int hg = 0; hg <board.length; hg += numOfRowsInGrid){
-            for (int vg = 0; vg < board[0].length; vg += 3){
+        // check horizontal and vertical
+        for (int hg = 0; hg < board.length; hg += numOfRowsInGrid) {
+            for (int vg = 0; vg < board[0].length; vg += 3) {
                 String set = setValues;
-                for (int i = hg; i < (hg + numOfRowsInGrid); i++){
-                    for (int j = vg; j <vg + 3; j++){
+                for (int i = hg; i < (hg + numOfRowsInGrid); i++) {
+                    for (int j = vg; j < vg + 3; j++) {
                         set = set.replace("" + board[i][j], "");
                     }
                 }
-                if (!set.isEmpty()){
+                if (!set.isEmpty()) {
                     isCorrect = false;
                     return isCorrect;
                 }
@@ -195,6 +189,7 @@ public class Sudoku {
         }
         return isCorrect;
     }
+
     public int[][] getNewPuzzle(int grid, int gameMode) {
         return createPuzzle(createBoard(VALID_BOARD_9X9), gameMode);
     }
@@ -202,8 +197,8 @@ public class Sudoku {
     public int[][] resetPuzzle() {
         return puzzle;
     }
-    
-    private void printArray(int[][] a){
+
+    private void printArray(int[][] a) {
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < a[i].length; j++) {
                 System.out.print(a[i][j] + "\t");
