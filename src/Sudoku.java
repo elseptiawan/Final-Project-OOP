@@ -9,9 +9,9 @@ public class Sudoku {
             { 1, 6, 8, 3, 9, 2, 5, 7, 4 } };
 
     public static final int GRID_9X9 = 9;
-    public static final int GAME_MODE_EASY = 4;
-    public static final int GAME_MODE_HARD = 1;
-    public static final int GAME_MODE_MEDIUM = 2;
+    public static final int GAME_MODE_EASY = 45;
+    public static final int GAME_MODE_HARD = 72;
+    public static final int GAME_MODE_MEDIUM = 63;
     public static final String SET_VALUE_9X9 = "123456789";
 
     private int[][] puzzle;
@@ -138,10 +138,6 @@ public class Sudoku {
     // Define number of empty blocks according to game mode.
     private int getNumberOfEmptyBlock(int[][] board, int mode) {
         int numOfEmptyBlock = mode;
-        int numOfBlock = board.length * board[0].length;
-
-        int tolerance = numOfBlock - numOfEmptyBlock;
-        numOfEmptyBlock += random.nextInt(tolerance + 1); // to avoid negetive
 
         return numOfEmptyBlock;
     }
