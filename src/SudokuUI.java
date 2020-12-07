@@ -418,9 +418,10 @@ public class SudokuUI extends javax.swing.JFrame {
         JPanel inputs = new Inputs(this, block, inputButtton, numOfInput);
         block.remove(inputButtton);
         block.add(inputs);
+        inputButtton.setBackground(new java.awt.Color(255, 255, 0));
         this.setVisible(true);
     }
-
+    
     public void setInput(String ans, JPanel block, JButton inputButtton) {
         block.removeAll();
         inputButtton.setText(ans);
